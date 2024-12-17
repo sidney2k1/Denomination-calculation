@@ -1,0 +1,15 @@
+from tkinter import *
+screen=Tk()
+screen.geometry("400x300")
+screen.title("Double window")
+def topwin():
+    top=Toplevel()
+    top.geometry("100x100")
+    top.title("New window")
+    l=Label(top,text="this is top window")
+    l.pack()
+l2=Label(screen,text="This is main window")
+btn=Button(screen,text="click to go to top window",command=topwin)
+l2.pack()
+btn.pack()
+screen.mainloop()
